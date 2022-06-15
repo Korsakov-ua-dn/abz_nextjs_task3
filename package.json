@@ -1,5 +1,6 @@
 {
   "name": "task3",
+  "homepage": "https://abz-nextjs-task3.herokuapp.com/",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",

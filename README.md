@@ -1,6 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Use node v 17.8
+Use     "node": "17.9.0",
+        "npm": "8.5.5"
 
 ## Getting Started
 
@@ -22,3 +23,6 @@ npm run storybook
 Open with your browser to see the result.
 │    Local:            http://localhost:6006/
 │    On your network:  http://192.168.1.28:6006/
+
+You can see the APP at homepage:
+https://abz-nextjs-task3.herokuapp.com/
