@@ -76,8 +76,6 @@ const Header = ({ isAuth, isServerError, setOpenMenu }) => {
 
 export default Header;
 
-
-
 // left
 const HeaderLeft = ({ mobile, t, router }) => (
   <div className={s.left}>
@@ -151,7 +149,7 @@ const BtnSignBlock = ({ t, router }) => (
   <>
     <div className={s.headerBtn}>
       <Btn
-        onClick={() => router.push("/sign-in")}
+        onClick={() => router.push("/login")}
         small
         outlined
         header
@@ -162,7 +160,7 @@ const BtnSignBlock = ({ t, router }) => (
     </div>
 
     <div className={s.headerBtn}>
-      <Btn onClick={() => router.push("/sign-up")} small header width={130}>
+      <Btn onClick={() => router.push("/registration#form")} small header width={130}>
         {t("header:sign-up")}
       </Btn>
     </div>

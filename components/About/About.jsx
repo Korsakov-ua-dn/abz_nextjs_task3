@@ -33,7 +33,7 @@ const About = ({ t }) => {
                 <Btn secondary>{t("header:users")}</Btn>
               </ScrollLink>
             ) : (
-              <Btn onClick={() => router.push("/sign#form")} secondary>
+              <Btn onClick={() => router.push("registration#form")} secondary>
                 {t("header:sign-up")}
               </Btn>
             )}

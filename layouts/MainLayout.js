@@ -9,10 +9,8 @@ import LangLinks from "../components/Common/LangLinks/LangLinks";
 // import Menu from "../components/Menu/Menu";
 
 const MainLayout = ({ children, title, description, keywords }) => {
-  const [isAuth, setAuth] = useState(true);
+  const { isAuth, isServerError } = useSelector((s) => s.app);
   const [isOpenMenu, setOpenMenu] = useState(false);
-
-  const isServerError = useSelector((s) => s.app.isServerError);
 
   const name = "Maximilian ";
   const email = "MaximilianMaximilian@gmail.com";

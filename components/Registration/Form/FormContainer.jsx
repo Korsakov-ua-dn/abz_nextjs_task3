@@ -25,9 +25,9 @@ const FormContainer = ({ t }) => {
     : t("registration:form-subtitle");
 
   return (
-    <section className={s.section}>
+    <section id="form" className={s.section}>
       <div className={s.container}>
-        <h1 id="form">{title}</h1>
+        <h1>{title}</h1>
         <h3>{subtitle}</h3>
 
         {isSuccessRegistration ? (

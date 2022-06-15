@@ -34,7 +34,7 @@ const MainBanner = ({ t }) => {
                 <Btn>{t("header:users")}</Btn>
               </ScrollLink>
             ) : (
-              <Btn onClick={() => router.push("/sign#form")}>
+              <Btn onClick={() => router.push("/registration#form")}>
                 {t("header:sign-up")}
               </Btn>
             )}

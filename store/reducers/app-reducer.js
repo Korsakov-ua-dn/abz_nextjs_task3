@@ -1,5 +1,5 @@
 const initialState = {
-  isAuth: true,
+  isAuth: false,
   isServerError: false,
   // numberColumns: 0,
   // isOpenModal: false,
