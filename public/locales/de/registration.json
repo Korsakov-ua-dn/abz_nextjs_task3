@@ -1,0 +1,23 @@
+{
+  "banner-title": "Erforderliche Fähigkeiten für Spezialisten im Web",
+  "banner-description": "Ein Frontend-Entwickler setzt nicht nur Layouts. Er kennt sich gut mit JavaScript aus, versteht Frameworks und Bibliotheken (und nutzt einige davon aktiv), versteht, was serverseitig „unter der Haube“ steckt. Er hat keine Angst vor Präprozessoren und Kollektoren LESS, SASS, GRUNT, GULP, er weiß, wie man mit DOM, API, SVG-Objekten, AJAX und CORS arbeitet, kann SQL-Abfragen erstellen und Daten ausgraben.",
+  "banner-description-mobile": "Ein Frontend-Entwickler setzt nicht nur Layouts. Er hat keine Angst vor Präprozessoren und Sammlern LESS, SASS, GRUNT, GULP.",
+  "form-title": "Registrieren Sie sich, um eine Arbeit zu erhalten",
+  "form-subtitle": "Ihre persönlichen Daten werden gemäß der Datenschutzerklärung gespeichert",
+  "registration-unsuccess": "Leider wurde Ihr Facebook-Login nicht authentifiziert. Bitte füllen Sie das Formular aus, um mit der Registrierung fortzufahren. Sobald Ihre Bestätigungs-E-Mail genehmigt wurde, können Sie die Website über Facebook betreten.",
+  "helper-name": "Geben Sie Ihren Namen ein, zum Beispiel Max Mustermann",
+  "helper-email": "Geben Sie Ihre E-Mail im Format xхххх@ххххх.ххх ein",
+  "helper-phone": "Formatieren Sie +38 (XXX) XXX-XXXX",
+  "helper-upload": "Dateiformat jpg bis 5 MB, Mindestgröße 70x70px",
+  "label-name": "Dein Name",
+  "label-email": "Email",
+  "label-phone": "Telefon",
+  "label-position": "Position",
+  "label-upload": "Dein Foto hochladen",
+  "disabled-title": "Die Registrierung ist derzeit nicht verfügbar Bitte versuchen Sie es später erneut",
+  "disabled-btn": "Lade diese Seite neu",
+  "success-title": "Danke!",
+  "success-subtitle": "Registrierung erfolgreich abgeschlossen",
+  "success-description": "Sie werden in Kürze auf die Startseite weitergeleitet oder klicken Sie auf die Schaltfläche unten, um zurückzukehren",
+  "success-btn": "Zur Startseite"
+}

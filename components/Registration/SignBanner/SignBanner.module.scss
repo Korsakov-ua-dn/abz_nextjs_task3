@@ -1,0 +1,159 @@
+.main {
+  width: 100%;
+  padding-top: 60px;
+  background: #EDECEA;
+
+  margin-bottom: 20px;
+}
+
+.backgroundImg {
+  margin: 0 auto;
+  max-width: 1392px;
+  height: 650px;
+  background-image: url("/images/signUp/man-1392.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.container {
+  max-width: 1392px;
+  padding: 0 36px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto;
+}
+
+.contentWrapper {
+  width: 545px;
+  height: 388px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 60px;
+    line-height: 64px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 11px;
+  }
+}
+
+//@media screen and (max-width: 2560px) {
+//  .backgroundImg {
+//    background: center / cover no-repeat url("/images/home/girl-2560.webp");
+//  }
+//}
+
+//@media screen and (max-width: 1920px) {
+//  .backgroundImg {
+//    background: center / cover no-repeat url("/images/home/girl-1920.webp");
+//  }
+//}
+
+@media screen and (max-width: 1440px) {
+  .backgroundImg {
+    background-image: url("/images/signUp/man-1392.webp");
+  }
+  .container {
+    padding: 0 32px;
+  }
+}
+
+//@media screen and (max-width: 1280px) {
+//  .backgroundImg {
+//    background-image: url("/images/home/girl-1280.webp");
+//  }
+//}
+
+
+@media screen and (max-width: 1024px) {
+  .backgroundImg {
+    background-image: url("/images/signUp/man-1024.webp");
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .backgroundImg {
+    //max-width: 768px;
+    height: 488px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .contentWrapper {
+    width: 430px;
+
+    h1 {
+      font-size: 38px;
+      line-height: 40px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .backgroundImg {
+    background-image: url("/images/signUp/man-768.webp");
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .backgroundImg {
+    //max-width: 767px;
+    height: 380px;
+    //background: center / cover no-repeat url("/images/home/girl-768.webp");
+    //background-position: -218px 22px;
+
+    background-position: 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .contentWrapper {
+    width: 266px;
+    height: 288px;
+    margin-bottom: 8px;
+    align-items: flex-end;
+    text-align: right;
+
+    h1 {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    p {
+      width: 243px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .backgroundImg {
+    background-image: url("/images/signUp/man-360.webp");
+    background-position: center top;
+  }
+}
+
+//height
+@media screen and (max-height: 749px) and (min-width: 1024px) {
+  .backgroundImg {
+    height: 500px;
+  }
+}

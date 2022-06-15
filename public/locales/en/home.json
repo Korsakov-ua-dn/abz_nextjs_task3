@@ -1,0 +1,19 @@
+{
+  "main-title": "Test assignment for front-end developers",
+  "main-description": "Front-end developers make sure the user sees and interacts with all the necessary elements to ensure conversion. Therefore, responsive design, programming languages and specific frameworks are the must-have skillsets to look for when assessing your front-end developers.",
+  "main-description-mobile": "Front-end developers make sure the user sees and interacts with all the necessary elements to ensure conversion.",
+  "about-title": "Let's get acquainted",
+  "about-subtitle": "I'm a good front-end developer",
+  "about-description": "What defines a good front-end developer is one that has skilled knowledge of HTML, CSS, JS with a vast understanding of User design thinking as they'll be building web interfaces with accessibility in mind. They should also be excited to learn, as the world of Front&#8209;End Development keeps evolving.",
+  "relationship-title": "About my relationship<br/>with web-development",
+  "relationship-subtitle-html": "I’m in love with HTML",
+  "relationship-description-html": "Hypertext Markup Language (HTML) is the standard markup language for documents designed to be displayed in a web browser. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.",
+  "relationship-subtitle-css": "CSS is my inspiration",
+  "relationship-description-css": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics.",
+  "relationship-subtitle-js": "JavaScript is my friend",
+  "relationship-description-js": "JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high&#8209;level, often just&#8209;in&#8209;time compiled, and multi&#8209;paradigm. It has curly&#8209;bracket syntax, dynamic typing, prototype&#8209;based object&#8209;orientation, and first&#8209;class functions.",
+  "users-title": "Our cheerful users",
+  "no-users-title": "There are no users at the moment. Be the first",
+  "users-subtitle": "The best specialists are shown below",
+  "show-more": "Show more"
+}

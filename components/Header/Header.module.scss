@@ -1,0 +1,274 @@
+@import "sassCommon/variables";
+
+.headerWrapper {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.15), 0px 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 19;
+}
+
+.serverError {
+  width: 100%;
+  padding: 18px 0;
+  background-color: #EA5924;
+}
+
+.errorMessage {
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background-color: #FFFFFF;
+}
+
+.contentBox {
+  max-width: 1320px;
+  height: 100%;
+  box-sizing: content-box;
+  padding: 0 32px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+}
+
+.logoClickArea {
+  height: 48px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo, .link:not(:last-child) {
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.link {
+  position: relative;
+  font-size: 16px;
+  line-height: 26px;
+
+  &:hover::before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    width: calc(100% + 24px);
+    height: 38px;
+    top: 50%;
+    left: -12px;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    background-color: rgba(234, 89, 36, 0.2);
+  }
+}
+
+.link.active {
+  color: #EA5924;
+  cursor: auto;
+  pointer-events: none;
+
+  &:hover::before {
+    background-color: transparent;
+  }
+}
+
+// right
+.menuBurger {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.headerBtn {
+  margin-left: 10px;
+}
+
+.cartLinkWrapper {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  border-radius: 100%;
+  border: 2px solid #F4E041;
+  cursor: pointer;
+}
+
+.userBtn {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  border: 2px solid #F4E041;
+  border-radius: 100%;
+  background-color: rgba(244, 224, 65, 0.1);
+  cursor: pointer;
+
+  &:focus {
+    background-color: rgba(244, 224, 65, 0.3);
+  }
+}
+
+.settingsList {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  width: 227px;
+  height: 166px;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(145, 145, 145, 0.25);
+  background-color: #FFFFFF;
+
+  & .userInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 13px 16px;
+    border-bottom: 1px solid #DFDFDF;
+
+    & .userData {
+      max-width: 143px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      span {
+        font-size: 12px;
+        line-height: 20px;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .name {
+        font-weight: 600;
+      }
+
+      .email {
+        color: #7E7E7E;
+      }
+    }
+  }
+
+  .itemWrapper {
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  & .quit {
+    width: 100%;
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      & .icon svg path {
+        fill: $secondaryColor;
+      }
+
+      & span {
+        color: $secondaryColor;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        cursor: pointer;
+        width: 211px;
+        height: 40px;
+        top: 50%;
+        left: 8px;
+        transform: translateY(-50%);
+        border-radius: 4px;
+        background: rgba(0, 189, 211, 0.1);
+      }
+    }
+
+    & .icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 16px;
+
+      & svg path {
+        fill: $enabledBorder;
+      }
+    }
+
+    & span {
+      font-size: 16px;
+      line-height: 26px;
+      margin-left: 10px;
+    }
+  }
+}
+
+// placeholder
+.placeholder {
+  display: flex;
+  align-items: center;
+
+  .p1 {
+    width: 60px;
+    height: 16px;
+    background-color: #D8D8D8;
+    border-radius: 2px;
+    margin-right: 30px;
+  }
+
+  .p2 {
+    width: 318px;
+    height: 38px;
+    background-color: #D8D8D8;
+    border-radius: 2px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .contentBox {
+    //max-width: 720px;
+    padding: 0 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contentBox {
+    //max-width: 360px;
+    padding: 0 16px;
+  }
+
+  .errorMessage {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

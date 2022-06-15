@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Asap';
+    src: url('/fonts/Asap.woff2') format('woff2'),
+    url('/fonts/Asap.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito.woff2') format('woff2'),
+    url('/fonts/Nunito.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F8F8F8;
+    font-family: 'Asap', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.87);
+    min-width: 360px !important;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+a, p, button, span, textarea, label, input {
+    font-family: 'Asap', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.MuiPaper-root {
+    box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.15), 0px 4px 15px rgba(0, 0, 0, 0.15);
+    /*top: 50% !important;*/
+    /*transform: translateY(65%) !important;*/
+
+}
+
+.MuiList-padding {
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+}
+

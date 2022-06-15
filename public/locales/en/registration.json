@@ -1,0 +1,23 @@
+{
+  "banner-title": "Required skills for specialist in web",
+  "banner-description": "A front-end developer doesn't just typeset layouts. He knows JavaScript well, understands frameworks and libraries (and actively uses some of them), understands what is \"under the hood\" on the server side. He is not afraid of preprocessors and collectors LESS, SASS, GRUNT, GULP, he knows how to work with the DOM, API, SVG objects, AJAX and CORS, can compose SQL queries and dig into data. ",
+  "banner-description-mobile": "A front-end developer doesn't just typeset layouts. He is not afraid of preprocessors and collectors<br/>LESS, SASS, GRUNT, GULP.",
+  "form-title": "Register to get a work",
+  "form-subtitle": "Your personal data is stored according to the Privacy Policy",
+  "registration-unsuccess": "Unfortunately, your Facebook log-in has not been authenticated. Please fill out the form to continue your registration. Once your confirmation email has been approved, you will be able to enter the site via Facebook.",
+  "helper-name": "Enter your name, example John Doe",
+  "helper-email": "Enter your email in format xхххх@ххххх.ххх",
+  "helper-phone": "Format +38 (XXX) XXX-XXXX",
+  "helper-upload": "File format jpg up to 5 MB, the minimum size of 70x70px",
+  "label-name": "Your name",
+  "label-email": "Email",
+  "label-phone": "Phone",
+  "label-position": "Position",
+  "label-upload": "Upload your photo",
+  "disabled-title": "Registration is currently unavailable Please try later",
+  "disabled-btn": "Reload this page",
+  "success-title": "Thank you!",
+  "success-subtitle": "Registration completed successfully",
+  "success-description": "You will be redirected to the home page shortly or click the button below to return",
+  "success-btn": "Go to home"
+}
