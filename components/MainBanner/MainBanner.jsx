@@ -24,13 +24,7 @@ const MainBanner = ({ t }) => {
             <h1>{t("home:main-title")}</h1>
             <p>{description}</p>
             {isAuth ? (
-              <ScrollLink
-                to="users"
-                spy
-                smooth
-                offset={0}
-                duration={500}
-              >
+              <ScrollLink to="users" spy smooth offset={0} duration={500}>
                 <Btn>{t("header:users")}</Btn>
               </ScrollLink>
             ) : (
