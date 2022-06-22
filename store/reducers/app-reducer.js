@@ -40,7 +40,7 @@ export const initializeApp = () => (dispatch) => {
     .getToken()
     .then((res) => {
       dispatch(setToken(res.data.token));
-      console.log("add axios");
+      console.log(res.data.token);
     })
     .catch((e) => {
       const errorMessage = e.response?.data?.message || "Unknown error!";

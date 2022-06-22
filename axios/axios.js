@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: `https://frontend-test-assignment-api.abz.agency/api/v1`,
+  baseURL: `${process.env.NEXT_PUBLIC_API_URL}`,
 });
 
 export const authAPI = {
