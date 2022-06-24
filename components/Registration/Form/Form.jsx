@@ -9,9 +9,13 @@ import CustomSelect from "../../Common/Select/Select";
 import { UploadFile } from "../../Common/UploadFile/UploadFile";
 import Btn from "../../Common/Buttons/Btn/Btn";
 import { useState } from "react";
-import validateUploadFile from "../../../utils/validateUploadFile";
+import { createUserTC } from "../../../store/reducers/sign-reducer";
+import { useDispatch } from "react-redux";
+// import validateUploadFile from "../../../utils/validateUploadFile";
 
 const Form = ({ isServerError, positions, t }) => {
+  const dispatch = useDispatch();
+
   const [uploadFileName, setUploadFileName] = useState("");
 
   const initialValues = {
@@ -35,12 +39,14 @@ const Form = ({ isServerError, positions, t }) => {
         initialValues={initialValues}
         validationSchema={validateForm}
         onSubmit={(values, { resetForm }) => {
-          const { name, email, phone, position, upload } = values;
-          // dispatch(
-          //   addUser({ name, email, phone, position, photo: upload[0] })
-          // );
+          // eslint-disable-next-line prefer-const
+          let { name, email, phone, position, upload } = values;
+          phone = phone.replace("(", "").replace(")", "").replace("-", "");
+          dispatch(
+            createUserTC({ name, email, phone, position, photo: upload })
+          );
 
-          console.log("values: ", values);
+          // console.log("values: ", values);
           setUploadFileName("");
           resetForm(initialValues);
         }}
@@ -65,6 +71,7 @@ const Form = ({ isServerError, positions, t }) => {
           // console.log("upload value: ", values.upload);
           // console.log('FormContainer render');
           // console.table([values, errors, touched]);
+          // console.log("values: ", values);
 
           // const onBlurAnotherPhonesHandler = (e) => {
           //   const replaceValue = e.target.value
@@ -163,7 +170,7 @@ const Form = ({ isServerError, positions, t }) => {
                 errorMessage={errors.position}
                 name="position"
                 positions={positions}
-                onChange={handleChange}
+                setFieldValue={setFieldValue}
               />
 
               <UploadFile

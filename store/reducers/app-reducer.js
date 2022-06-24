@@ -1,4 +1,4 @@
-import { authAPI } from "../../axios/axios";
+import { signUpAPI } from "../../api/api";
 
 const initialState = {
   isAuth: false,
@@ -33,7 +33,7 @@ export const setServerError = (isServerError) => ({
 //thunk
 export const initializeApp = () => (dispatch) => {
   // dispatch(setPreloader(true));
-  authAPI
+  signUpAPI
     .getToken()
     .then((res) => {
       localStorage.setItem("token", res.data.token);

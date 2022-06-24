@@ -12,7 +12,14 @@ import { useMediaQuery } from "@mui/material";
 
 const ITEM_HEIGHT = 32;
 
-const CustomSelect = ({ label, marginBottom, disabled, error, positions }) => {
+const CustomSelect = ({
+  label,
+  marginBottom,
+  disabled,
+  error,
+  positions,
+  setFieldValue,
+}) => {
   // debugger
   const [position, setPosition] = React.useState("");
   const matches = useMediaQuery("(min-width:1024px)");
@@ -32,8 +39,8 @@ const CustomSelect = ({ label, marginBottom, disabled, error, positions }) => {
     },
   };
 
-  const handleChange = (event) => {
-    setPosition(event.target.value);
+  const handleChange = (e) => {
+    setPosition(e.target.value);
   };
 
   return (
@@ -50,7 +57,10 @@ const CustomSelect = ({ label, marginBottom, disabled, error, positions }) => {
         >
           {positions.map((p) => (
             <MenuItemStyled key={p.id} value={p.name}>
-              <ListItemText primary={p.name} />
+              <ListItemText
+                primary={p.name}
+                onClick={() => setFieldValue("position", p.id)}
+              />
             </MenuItemStyled>
           ))}
         </Select>

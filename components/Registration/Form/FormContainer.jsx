@@ -9,8 +9,7 @@ const FormContainer = ({ t }) => {
   const dispatch = useDispatch();
 
   const { isAuth, isServerError } = useSelector((s) => s.app);
-  const positions = useSelector((s) => s.sign.positions);
-  const isSuccessRegistration = false;
+  const { positions, isSuccessRegistration } = useSelector((s) => s.sign);
 
   useEffect(() => {
     dispatch(getPositions());
