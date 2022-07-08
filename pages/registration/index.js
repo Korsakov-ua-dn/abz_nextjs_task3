@@ -7,7 +7,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import ScrollDownBtn from "../../components/Common/Buttons/ScrollDownBtn/ScrollDownBtn";
 import FormContainer from "../../components/Registration/Form/FormContainer";
 import AlertDialog from "../../components/Common/AlertDialog/AlertDialog";
-import SingletonRouter, { useRouter, Router } from "next/router";
+import SingletonRouter from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { setPathname } from "../../store/reducers/sign-reducer";
 
@@ -29,7 +29,7 @@ const SignUp = () => {
   const dispatch = useDispatch();
 
   const [openAlert, setOpenAlert] = useState(false);
-  const [isData, setData] = useState(true);
+  const [isData, setData] = useState(false);
 
   // перехватываю изменение урла если есть данные в форме
   useEffect(() => {
@@ -58,7 +58,7 @@ const SignUp = () => {
       <main className={s.main}>
         <SignBanner t={t} />
         <ScrollDownBtn toId="form" />
-        <FormContainer t={t} />
+        <FormContainer t={t} setDataisFilled={setData} />
       </main>
       <AlertDialog openAlert={openAlert} setOpenAlert={setOpenAlert} t={t} />
     </MainLayouts>

@@ -8,12 +8,12 @@ import InputWithMask from "../../Common/Input/InputWithMask";
 import CustomSelect from "../../Common/Select/Select";
 import { UploadFile } from "../../Common/UploadFile/UploadFile";
 import Btn from "../../Common/Buttons/Btn/Btn";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createUserTC } from "../../../store/reducers/sign-reducer";
 import { useDispatch } from "react-redux";
 // import validateUploadFile from "../../../utils/validateUploadFile";
 
-const Form = ({ isServerError, positions, t }) => {
+const Form = ({ isServerError, positions, t, setDataisFilled }) => {
   const dispatch = useDispatch();
 
   const [uploadFileName, setUploadFileName] = useState("");
@@ -71,7 +71,6 @@ const Form = ({ isServerError, positions, t }) => {
           // console.log("upload value: ", values.upload);
           // console.log('FormContainer render');
           // console.table([values, errors, touched]);
-          // console.log("values: ", values);
 
           // const onBlurAnotherPhonesHandler = (e) => {
           //   const replaceValue = e.target.value
@@ -81,6 +80,11 @@ const Form = ({ isServerError, positions, t }) => {
           //   setFieldValue("anotherPhones", replaceValue);
           //   handleBlur(e);
           // };
+
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          useEffect(() => {
+            setDataisFilled(dirty);
+          }, [dirty]);
 
           const onChangePhoneHandler = (e) => {
             // console.log(e);

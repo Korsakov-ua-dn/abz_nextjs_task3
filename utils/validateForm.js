@@ -1,5 +1,5 @@
 import * as Yup from "yup";
-import { checkImageSize } from "./validateUploadFile";
+// import { checkImageSize } from "./validateUploadFile";
 
 export const validateForm = Yup.object().shape({
   name: Yup.string()
@@ -124,7 +124,7 @@ export const validateForm = Yup.object().shape({
         return true;
       }
     )
-    .test("not jpeg", "Please add file in jpeg format.", async (value) => {
+    .test("is jpeg", "Please add file in jpeg format.", async (value) => {
       // debugger;
       if (value) {
         const acceptFileType = await new Promise((resolve) => {

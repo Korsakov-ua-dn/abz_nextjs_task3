@@ -34,7 +34,6 @@ export const signUpAPI = {
   },
 
   postUser(payload, token) {
-    debugger
     const formData = new FormData();
     formData.append("name", payload.name);
     formData.append("email", payload.email);

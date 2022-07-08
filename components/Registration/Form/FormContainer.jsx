@@ -5,7 +5,7 @@ import { getPositions } from "../../../store/reducers/sign-reducer";
 import Success from "./Success";
 import Form from "./Form";
 
-const FormContainer = ({ t }) => {
+const FormContainer = ({ t, setDataisFilled }) => {
   const dispatch = useDispatch();
 
   const { isAuth, isServerError } = useSelector((s) => s.app);
@@ -32,7 +32,12 @@ const FormContainer = ({ t }) => {
         {isSuccessRegistration ? (
           <Success t={t} />
         ) : (
-          <Form isServerError={isServerError} positions={positions} t={t} />
+          <Form
+            setDataisFilled={setDataisFilled}
+            isServerError={isServerError}
+            positions={positions}
+            t={t}
+          />
         )}
       </div>
     </section>
