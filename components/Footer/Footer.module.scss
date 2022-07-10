@@ -22,7 +22,8 @@
   padding-right: 9%;
 
   & img {
-    aspect-ratio: 467 / 177;
+    width: 467px;
+    height: 177px;
   }
 }
 
@@ -203,7 +204,8 @@
     height: 124px;
 
     & img {
-      aspect-ratio: 328 / 124;
+      width: 328px;
+      height: 124px;
     }
   }
 
@@ -229,7 +231,8 @@
 @media screen and (min-width: 1400px) {
   .picture {
     & img {
-      aspect-ratio: 972 / 177;
+      width: 972px;
+      height: 177px;
     }
   }
 }
