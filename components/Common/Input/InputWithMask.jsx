@@ -23,9 +23,9 @@ const InputWithMask = ({
   setFieldValue,
   formatChars,
   onPaste,
-  setFieldTouched,
+  // setFieldTouched,
 }) => {
-  console.log("Render Input with mask");
+  // console.log("Render Input with mask");
 
   const counterStyle = {
     color: ` ${disable ? variables.disableBorder : variables.textColor} `,

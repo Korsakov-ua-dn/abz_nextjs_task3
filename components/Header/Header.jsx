@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import s from "./Header.module.scss";
 import Btn from "../Common/Buttons/Btn/Btn";
 import React, { useState } from "react";
@@ -139,6 +140,8 @@ const MobileRight = ({ currentLang, setOpenMenu }) => (
         setOpenMenu(true);
         document.body.style.overflow = "hidden";
       }}
+      role="button"
+      tabIndex={0}
     >
       <MenuBurger />
     </div>
@@ -160,7 +163,12 @@ const BtnSignBlock = ({ t, router }) => (
     </div>
 
     <div className={s.headerBtn}>
-      <Btn onClick={() => router.push("/registration#form")} small header width={130}>
+      <Btn
+        onClick={() => router.push("/registration#form")}
+        small
+        header
+        width={130}
+      >
         {t("header:sign-up")}
       </Btn>
     </div>

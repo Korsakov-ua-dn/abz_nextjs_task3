@@ -20,9 +20,9 @@ const Input = ({
   handleBlur,
   setFieldValue,
   validateField,
-  setFieldTouched,
+  // setFieldTouched,
 }) => {
-  console.log("Render Input");
+  // console.log("Render Input");
 
   const counterStyle = {
     color: ` ${disable ? variables.disableBorder : variables.textColor} `,

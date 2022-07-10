@@ -10,7 +10,7 @@ const FormContainer = ({ t, setDataisFilled }) => {
 
   // console.log("Render form container");
 
-  const { isAuth, isServerError } = useSelector((s) => s.app);
+  const { isServerError } = useSelector((s) => s.app);
   const { positions, isSuccessRegistration } = useSelector((s) => s.sign);
 
   useEffect(() => {

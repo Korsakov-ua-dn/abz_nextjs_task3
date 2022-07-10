@@ -12,13 +12,13 @@ const UploadFile = ({
   placeholder,
   marginBottom,
   helperText,
-  value,
-  onChange,
+  // value,
+  // onChange,
   setFieldValue,
   setFieldTouched,
   uploadFileName,
   setUploadFileName,
-  validateField,
+  // validateField,
 }) => {
   // console.log("Render Upload file");
   // console.log("err: ", errorMessage);

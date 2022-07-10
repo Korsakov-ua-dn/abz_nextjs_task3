@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { UploadFile } from "./UploadFile";
+import UploadFile from "./UploadFile";
 
 export default {
   title: "Example/UploadFile",
