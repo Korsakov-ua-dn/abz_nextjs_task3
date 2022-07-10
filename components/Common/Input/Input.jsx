@@ -1,3 +1,4 @@
+import React from "react";
 import TextField from "@mui/material/TextField";
 import { styled } from "@mui/material/styles";
 import s from "./Input.module.scss";
@@ -21,6 +22,8 @@ const Input = ({
   validateField,
   setFieldTouched,
 }) => {
+  console.log("Render Input");
+
   const counterStyle = {
     color: ` ${disable ? variables.disableBorder : variables.textColor} `,
   };
@@ -168,7 +171,6 @@ export const InputWithStyle = styled(TextField)`
     width: 100%;
     padding: 3px 70px 0 14px;
     margin: 0;
-    
     font-family: "Asap", sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -190,4 +192,4 @@ export const InputWithStyle = styled(TextField)`
   }
 `;
 
-export default Input;
+export default React.memo(Input);

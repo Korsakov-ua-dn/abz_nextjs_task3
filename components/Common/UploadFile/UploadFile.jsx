@@ -1,7 +1,7 @@
+import React from "react";
 import s from "./UploadFile.module.scss";
-// import validateUploadFile from "../../../utils/validateUploadFile";
 
-export const UploadFile = ({
+const UploadFile = ({
   disable,
   errorMessage,
   touched,
@@ -20,7 +20,7 @@ export const UploadFile = ({
   setUploadFileName,
   validateField,
 }) => {
-  // console.log("value: ", value);
+  // console.log("Render Upload file");
   // console.log("err: ", errorMessage);
 
   const setName = (e) => {
@@ -86,3 +86,5 @@ export const UploadFile = ({
     </div>
   );
 };
+
+export default React.memo(UploadFile);

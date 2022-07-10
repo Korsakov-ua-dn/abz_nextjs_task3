@@ -60,7 +60,7 @@ const SignUp = () => {
         <ScrollDownBtn toId="form" />
         <FormContainer t={t} setDataisFilled={setData} />
       </main>
-      <AlertDialog openAlert={openAlert} setOpenAlert={setOpenAlert} t={t} />
+      {openAlert && <AlertDialog setOpenAlert={setOpenAlert} t={t} />}
     </MainLayouts>
   );
 };

@@ -1,11 +1,11 @@
 import s from "./SignBanner.module.scss";
 import Btn from "../../Common/Buttons/Btn/Btn";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { useMediaQuery } from "@mui/material";
 
 const SignBanner = ({ t }) => {
-  const isAuth = useSelector((s) => s.app.isAuth);
-  // console.log(isAuth);
+  // const isAuth = useSelector((s) => s.app.isAuth);
+  // console.log("Render banner");
   const desktop = useMediaQuery("(min-width:768px)");
 
   const description = desktop

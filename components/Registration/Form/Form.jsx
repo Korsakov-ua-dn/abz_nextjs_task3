@@ -6,15 +6,16 @@ import { validateForm } from "../../../utils/validateForm";
 import Input from "../../Common/Input/Input";
 import InputWithMask from "../../Common/Input/InputWithMask";
 import CustomSelect from "../../Common/Select/Select";
-import { UploadFile } from "../../Common/UploadFile/UploadFile";
+import UploadFile from "../../Common/UploadFile/UploadFile";
 import Btn from "../../Common/Buttons/Btn/Btn";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { createUserTC } from "../../../store/reducers/sign-reducer";
 import { useDispatch } from "react-redux";
 // import validateUploadFile from "../../../utils/validateUploadFile";
 
 const Form = ({ isServerError, positions, t, setDataisFilled }) => {
   const dispatch = useDispatch();
+  console.log("Render form");
 
   const [uploadFileName, setUploadFileName] = useState("");
 
@@ -61,12 +62,12 @@ const Form = ({ isServerError, positions, t, setDataisFilled }) => {
           handleReset,
           // isSubmitting,
           setFieldValue,
-          setFieldError,
+          // setFieldError,
           setFieldTouched,
           validateField,
           isValid,
           dirty,
-          validateForm,
+          // validateForm,
         }) => {
           // console.log("upload value: ", values.upload);
           // console.log('FormContainer render');
@@ -86,7 +87,8 @@ const Form = ({ isServerError, positions, t, setDataisFilled }) => {
             setDataisFilled(dirty);
           }, [dirty]);
 
-          const onChangePhoneHandler = (e) => {
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          const onChangePhoneHandler = useCallback((e) => {
             // console.log(e);
             if (e.nativeEvent.inputType === "insertFromPaste") {
               // console.log(e.nativeEvent, 'input value');
@@ -94,9 +96,10 @@ const Form = ({ isServerError, positions, t, setDataisFilled }) => {
               return;
             }
             handleChange(e);
-          };
+          });
 
-          const onPastePhoneHandler = (e) => {
+          // eslint-disable-next-line react-hooks/rules-of-hooks
+          const onPastePhoneHandler = useCallback((e) => {
             const pasteText = e.clipboardData.getData("Text");
             // console.log("onPaste", pasteText);
             // console.log(e.clipboardData.getData('Text'));
@@ -104,7 +107,7 @@ const Form = ({ isServerError, positions, t, setDataisFilled }) => {
             // console.log(onlyNumbers);
             const last9 = onlyNumbers.slice(-9);
             setFieldValue("phone", last9);
-          };
+          });
 
           return (
             <form className={s.form} onSubmit={handleSubmit}>

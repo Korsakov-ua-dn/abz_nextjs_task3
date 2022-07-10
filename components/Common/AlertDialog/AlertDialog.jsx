@@ -9,8 +9,10 @@ import styled from "styled-components";
 import SingletonRouter, { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 
-const AlertDialog = ({ openAlert, setOpenAlert, t }) => {
+const AlertDialog = ({ setOpenAlert, t }) => {
   const { pathname } = useSelector((s) => s.sign);
+
+  // console.log("Render Alert");
 
   const stayHandler = () => {
     setOpenAlert(false);
@@ -24,27 +26,25 @@ const AlertDialog = ({ openAlert, setOpenAlert, t }) => {
 
   const router = useRouter();
   return (
-    <div>
-      <StyledDialog
-        open={openAlert}
-        onClose={() => setOpenAlert(false)}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          {t("common:alert-question")}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            {t("common:alert-text")}
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={stayHandler}>{t("common:alert-stay-btn")}</Button>
-          <Button onClick={leaveHandler}>{t("common:alert-leave-btn")}</Button>
-        </DialogActions>
-      </StyledDialog>
-    </div>
+    <StyledDialog
+      open
+      onClose={() => setOpenAlert(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+    >
+      <DialogTitle id="alert-dialog-title">
+        {t("common:alert-question")}
+      </DialogTitle>
+      <DialogContent>
+        <DialogContentText id="alert-dialog-description">
+          {t("common:alert-text")}
+        </DialogContentText>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={stayHandler}>{t("common:alert-stay-btn")}</Button>
+        <Button onClick={leaveHandler}>{t("common:alert-leave-btn")}</Button>
+      </DialogActions>
+    </StyledDialog>
   );
 };
 

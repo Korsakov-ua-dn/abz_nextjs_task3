@@ -20,7 +20,7 @@ const CustomSelect = ({
   positions,
   setFieldValue,
 }) => {
-  // debugger
+  // console.log("Render select");
   const [position, setPosition] = React.useState("");
   const matches = useMediaQuery("(min-width:1024px)");
   const totalItems = matches ? 7 : 3;
@@ -95,7 +95,7 @@ const MenuItemStyled = styled(MenuItem)`
     cursor: auto;
     pointer-events: none; // блок повторный клик выбранного элемента
     & div span:before {
-      content: url("https://test2022-oleg-k2.abzdev2.com/images/checkSelect.svg");
+      content: url("https://abz-nextjs-task3.herokuapp.com/images/checkSelect.svg");
       display: block;
       width: 9px;
       height: 8px;
@@ -233,4 +233,4 @@ const FormControlStyled = styled(FormControl)`
   }
 `;
 
-export default CustomSelect;
+export default React.memo(CustomSelect);

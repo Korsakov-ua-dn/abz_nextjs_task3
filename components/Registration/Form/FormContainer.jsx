@@ -8,6 +8,8 @@ import Form from "./Form";
 const FormContainer = ({ t, setDataisFilled }) => {
   const dispatch = useDispatch();
 
+  // console.log("Render form container");
+
   const { isAuth, isServerError } = useSelector((s) => s.app);
   const { positions, isSuccessRegistration } = useSelector((s) => s.sign);
 

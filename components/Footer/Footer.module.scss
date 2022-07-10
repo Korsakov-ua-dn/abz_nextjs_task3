@@ -20,6 +20,10 @@
   height: 177px;
   background-color: #F8F8F8;
   padding-right: 9%;
+
+  & img {
+    aspect-ratio: 467 / 177;
+  }
 }
 
 .container {
@@ -197,6 +201,10 @@
 
   .picture {
     height: 124px;
+
+    & img {
+      aspect-ratio: 328 / 124;
+    }
   }
 
   .up {
@@ -214,6 +222,14 @@
 
     .socialLinkWrapper {
       margin-bottom: 23px;
+    }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .picture {
+    & img {
+      aspect-ratio: 972 / 177;
     }
   }
 }

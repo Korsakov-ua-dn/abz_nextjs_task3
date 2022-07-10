@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 
 const Success = ({ t }) => {
   const router = useRouter();
+
   return (
     <div className={s.successWrapper}>
       <img
