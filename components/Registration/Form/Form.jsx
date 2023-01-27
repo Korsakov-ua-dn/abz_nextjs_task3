@@ -15,7 +15,7 @@ import { useDispatch } from "react-redux";
 
 const Form = ({ isServerError, positions, t, setDataisFilled }) => {
   const dispatch = useDispatch();
-  console.log("Render form");
+  // console.log("Render form");
 
   const [uploadFileName, setUploadFileName] = useState("");
 

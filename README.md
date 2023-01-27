@@ -1,7 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Use     "node": "17.9.0",
-        "npm": "8.5.5"
+Use:
+  "engines": {
+    "node": "17.9.0",
+    "npm": "8.5.5"
+  }
 
 ## Getting Started
 
